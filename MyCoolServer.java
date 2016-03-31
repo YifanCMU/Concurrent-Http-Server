@@ -4,6 +4,8 @@ package mycoolserver;
 /**
  * a Concurrent HTTP server
  * @author Yifan Wang
+ * Please test the server by using web browser to visit "localhost:7777/filename" e.g. "localhost:/7777/MadaData.txt"
+ * If the file you want is under the same directory as this piece of code, then the content of the file will be returned to your web browser
  */
 import java.net.*;
 import java.io.*;
@@ -39,6 +41,7 @@ public class MyCoolServer {
         } catch (IOException e) {
             System.out.println("IO Exception:" + e.getMessage());
             out.println("HTTP/1.1 404 not found\n");
+            out.println("File does not exist");
             out.flush();
         } finally {
             try {if (clientSocket != null) {
