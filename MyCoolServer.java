@@ -24,7 +24,8 @@ public class MyCoolServer {
             out = new PrintWriter(new BufferedWriter(new
                     OutputStreamWriter(clientSocket.getOutputStream())));
             String line = in.nextLine();
-            String filename = line.split("/")[1];  //get file name        
+            String filename = line.split("/")[1];  
+            filename = filename.substring(0, filename.length()-5); //get file name        
             File file = new File(filename);
             filescanner = new Scanner(file);
             String output = "HTTP/1.1 200 OK\n";
