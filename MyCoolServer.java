@@ -2,7 +2,7 @@
 package mycoolserver;
 
 /**
- * a concurrent HTTP server
+ * a Concurrent HTTP server
  * @author Yifan Wang
  */
 import java.net.*;
@@ -17,16 +17,14 @@ public class MyCoolServer {
         Scanner filescanner = null;
         try {
             int serverPort = 7777; //port number
-            
             listenSocket = new ServerSocket(serverPort);
             clientSocket = listenSocket.accept();
             Scanner in;
-            
             in = new Scanner(clientSocket.getInputStream());
             out = new PrintWriter(new BufferedWriter(new
                     OutputStreamWriter(clientSocket.getOutputStream())));
             String line = in.nextLine();
-            String filename = line.split("/")[1];            
+            String filename = line.split("/")[1];  //get file name        
             File file = new File(filename);
             filescanner = new Scanner(file);
             String output = "HTTP/1.1 200 OK\n";
