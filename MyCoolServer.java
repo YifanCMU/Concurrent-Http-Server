@@ -45,8 +45,9 @@ public class MyCoolServer {
             out.flush();
         } finally {
             try {if (clientSocket != null) {
-                filescanner.close();
-                
+                if (filescanner!=null) {
+                    filescanner.close();
+                }
                 listenSocket.close();
                 clientSocket.close();
                     
