@@ -25,7 +25,7 @@ public class MyCoolServer {
             String filename = line.split("/")[1];
             filename = filename.substring(0, filename.length() - 5); //get file name   
             System.out.println("file name:"+filename);
-            if(filename.endsWith(".jpg")){
+            if(filename.endsWith(".jpg")||filename.endsWith(".png")){
                 myserver.sendPic(filename,clientSocket);
             }
             else{
