@@ -2,9 +2,9 @@ package mycoolserver;
 /**
  * a Concurrent HTTP server
  *
- * @author Yifan Wang Please test the server by using web browser to visit
- * "localhost:7777/filename" e.g. "localhost:/7777/MadaData.txt" If the file you
- * want is under the same directory as this piece of code, then the content of
+ * @author Yifan Wang 
+ * Please test the server by using web browser to visit "localhost:7777/filename" e.g. "localhost:/7777/MadaData.txt" 
+ * If the file you want is under the same directory as this piece of code, then the content of
  * the file will be returned to your web browser
  */
 
